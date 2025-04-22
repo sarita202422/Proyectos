@@ -57,3 +57,44 @@ body {
     background-color: #1565c0;
     transform: scale(1.05);
 }
+/* Media Query para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .enlace {
+        padding: 10px 20px;
+    }
+}
+
+/* Media Query para pantallas pequeñas (smartphones) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 1.6rem;
+    }
+
+    .container p {
+        font-size: 0.95rem;
+    }
+
+    .enlace {
+        padding: 8px 15px;
+    }
+}
