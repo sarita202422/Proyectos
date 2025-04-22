@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://teclab.uct.cl/~sarita.marinao/</loc> <!-- URL de la página principal -->
+    <lastmod>2025-04-21</lastmod> <!-- Fecha de la última modificación de la página -->
+    <priority>1.00</priority> <!-- Prioridad de esta URL (1.00 es la máxima) -->
+  </url>
+  <url>
+    <loc>https://teclab.uct.cl/~sarita.marinao/taller2/taller2.html</loc> <!-- URL de otra página -->
+    <lastmod>2025-04-20</lastmod>
+    <priority>0.80</priority>
+  </url>
+   <url>
+    <loc></loc> <!-- URL de otra página -->
+    <lastmod>2025-04-20</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <!-- Más URLs aquí -->
+</urlset>
