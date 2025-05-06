@@ -49,6 +49,7 @@ if (mysqli_num_rows($resultado) > 0) {
 mysqli_close($conexion);
 ?>
     </main>
+    
     <footer id="contacto">
     <div class="footer-contacto">
         <h3>Contáctame</h3>
