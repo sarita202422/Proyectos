@@ -8,7 +8,7 @@
 
 <body>
     <h1>Mis Proyectos</h1>
-    <a href="admin/login.php" style="position: absolute; top: 20px; right: 20px;">Iniciar sesión</a>
+    <a href="../../admin/login.php" style="position: absolute; top: 20px; right: 20px;">Iniciar sesión</a>
     <div id="proyectos"></div>
 
     <script>
@@ -17,7 +17,7 @@
             contenedor.innerHTML = "Cargando...";
 
             try {
-                const res = await fetch("api/proyectos.php");
+                const res = await fetch("../../API/proyectos.php");
 
                 if (!res.ok) {
                     const errorData = await res.json();
@@ -39,7 +39,7 @@
               <p>${p.descripcion}</p>
               ${p.url_github ? `<a href="${p.url_github}" target="_blank">GitHub</a>` : ''}
               ${p.url_produccion ? ` | <a href="${p.url_produccion}" target="_blank">Ver online</a>` : ''}
-              ${p.imagen ? `<br><img src="uploads/${p.imagen}" alt="${p.titulo}" width="200"><br>` : ''}
+              ${p.imagen ? `<br><img src=" ../../uploads/${p.imagen}" alt="${p.titulo}" width="200"><br>` : ''}
               <hr>
             </div>
           `;
