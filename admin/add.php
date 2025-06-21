@@ -14,11 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $imagen = $_FILES['imagen']['name'];
   $tmp = $_FILES['imagen']['tmp_name'];
- if (move_uploaded_file($tmp, "../uploads/$imagen")) {
-  echo "Imagen subida con éxito.<br>";
-} else {
-  echo "Error al subir la imagen.<br>";
-}
+
+  if (move_uploaded_file($tmp, "../uploads/$imagen")) {
+    echo "Imagen subida con éxito.<br>";
+  } else {
+    echo "Error al subir la imagen.<br>";
+  }
 
   $sql = "INSERT INTO proyectos (titulo, descripcion, url_github, url_produccion, imagen) 
           VALUES ('$titulo', '$descripcion', '$url_github', '$url_produccion', '$imagen')";
@@ -28,12 +29,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<form method="post" enctype="multipart/form-data">
-  <input type="text" name="titulo" placeholder="Título" required><br>
-  <textarea name="descripcion" maxlength="200" placeholder="Descripción (máx 200 palabras)" required></textarea><br>
-  <input type="url" name="url_github" placeholder="URL GitHub"><br>
-  <input type="url" name="url_produccion" placeholder="URL Producción"><br>
-  <input type="file" name="imagen" required><br>
-  <button type="submit">Guardar</button>
-</form>
-  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Proyecto</title>
+  <link rel="stylesheet" href="../assets/css/Proyecto-integrado-final/add.css">
+</head>
+<body>
+  <div class="add-container">
+    <h2 class="add-title">Agregar Nuevo Proyecto</h2>
+
+    <form method="post" enctype="multipart/form-data">
+      <input type="text" name="titulo" placeholder="Título" required><br>
+      <textarea name="descripcion" maxlength="200" placeholder="Descripción (máx 200 palabras)" required></textarea><br>
+      <input type="url" name="url_github" placeholder="URL GitHub"><br>
+      <input type="url" name="url_produccion" placeholder="URL Producción"><br>
+      <input type="file" name="imagen" required><br>
+      <button type="submit" class="btn-add">Guardar</button>
+    </form>
+  </div>
+</body>
+</html>

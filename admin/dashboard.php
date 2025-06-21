@@ -14,12 +14,15 @@ $result = $conn->query("SELECT * FROM proyectos ORDER BY created_at DESC");
 <head>
   <meta charset="UTF-8">
   <title>Panel de Administración</title>
+  <link rel="stylesheet" href="../assets/css/Proyecto-integrado-final/dashboard.css">
 </head>
 <body>
   <h2>Bienvenido, <?php echo $_SESSION['user']; ?></h2>
-  <a href="logout.php">Cerrar sesión</a>
-  <br><br>
+<div class="header-actions">
   <a href="add.php">Agregar nuevo proyecto</a>
+  <a href="logout.php" class="logout-button">Cerrar sesión</a>
+
+</div>
 
   <h3>Lista de Proyectos</h3>
 

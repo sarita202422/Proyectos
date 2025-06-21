@@ -80,9 +80,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Editar Proyecto</title>
+  <link rel="stylesheet" href="../assets/css/Proyecto-integrado-final/edit.css">
 </head>
 <body>
-  <h2>Editar Proyecto</h2>
+  <div class="edit-container">
+  <h2 class="edit-title">Editar Proyecto</h2>
+  <form method="post" enctype="multipart/form-data">
 
   <?php if (!empty($errores)): ?>
     <ul style="color: red;">

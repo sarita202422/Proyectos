@@ -12,14 +12,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($result->num_rows === 1) {
     $_SESSION['user'] = $username;
     header("Location: dashboard.php");
+    exit();
   } else {
-    echo "Credenciales incorrectas.";
+    $error = "Credenciales incorrectas.";
   }
 }
 ?>
 
-<form method="post">
-  <input type="text" name="username" placeholder="Usuario" required><br>
-  <input type="password" name="password" placeholder="Contraseña" required><br>
-  <button type="submit">Iniciar Sesión</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../assets/css/Proyecto-integrado-final/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    
+    <?php if (!empty($error)) echo "<p style='color: red; text-align: center;'>$error</p>"; ?>
+    
+    <form method="post">
+      <input type="text" name="username" placeholder="Usuario" required>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+  </div>
+</body>
+</html>

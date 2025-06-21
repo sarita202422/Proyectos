@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a23;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.edit-container {
+  background-color: #111132;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  width: 100%;
+  max-width: 600px;
+}
+
+.edit-container h2 {
+  text-align: center;
+  color: #fc86cb;
+  margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1c1c3b;
+  color: #fff;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button[type="submit"] {
+  padding: 12px 20px;
+  background-color: #fc86cb;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #fc86cb;
+}
+.edit-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #141425;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.1);
+}
+
+.edit-title {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+}

@@ -42,6 +42,9 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<p>" . nl2br(htmlspecialchars($row['contenido'])) . "</p>";
         echo "<small>Publicado el " . $row['fecha'] . "</small>";
         echo "</article>";
+        echo "<a href='editar_post.php?id=" . $row['id'] . "' class='boton-editar'>Editar</a>";
+        echo "<a href='eliminar_post.php?id=" . $row['id'] . "' class='boton-eliminar' onclick=\"return confirm('¿Estás seguro de que deseas eliminar esta publicación?');\">Eliminar</a>";
+
     }
 } else {
     echo "<p>No hay publicaciones aún.</p>";
