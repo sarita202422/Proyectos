@@ -24,7 +24,7 @@
         <!-- Sección para mostrar los posts -->
         <section id="posts">
 <?php
-$conexion = mysqli_connect("localhost", "root", "", "blog_db");
+$conexion = mysqli_connect("teclab.uct.cl", "sarita_marinao", "sarita_marinao2025", "sarita_marinao_db2");
 
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());

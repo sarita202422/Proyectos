@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "blog_db";
+$servername = "teclab.uct.cl";
+$username = "sarita_marinao";
+$password = "sarita_marinao2025";
+$database = "sarita_marinao_db2";
 
 // Crear conexión
 $conn = mysqli_connect($servername, $username, $password, $database);
