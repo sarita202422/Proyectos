@@ -1,10 +1,15 @@
-/* Reset */
+/* -----------------------------------
+   Reset de estilos básicos del navegador
+   ----------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* -----------------------------------
+   Estilo general del cuerpo de la página
+   ----------------------------------- */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0e0e0e;
@@ -12,11 +17,17 @@ body {
   line-height: 1.6;
 }
 
+/* -----------------------------------
+   Encabezados generales
+   ----------------------------------- */
 h1, h2, h3 {
   font-weight: 600;
   letter-spacing: 1px;
 }
 
+/* -----------------------------------
+   Enlaces (con animación al pasar el mouse)
+   ----------------------------------- */
 a {
   color: #fc86cb;
   text-decoration: none;
@@ -26,6 +37,9 @@ a:hover {
   color: #ffffff;
 }
 
+/* -----------------------------------
+   Encabezado del sitio
+   ----------------------------------- */
 header {
   padding: 20px;
   text-align: center;
@@ -33,12 +47,18 @@ header {
   border-bottom: 1px solid #222;
 }
 
+/* -----------------------------------
+   Contenedor principal de la página
+   ----------------------------------- */
 main {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* -----------------------------------
+   Sección de proyectos (grilla responsiva)
+   ----------------------------------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -46,6 +66,9 @@ main {
   margin-top: 40px;
 }
 
+/* -----------------------------------
+   Tarjeta individual de proyecto
+   ----------------------------------- */
 .project-card {
   background: #1a1a1a;
   border: 1px solid #333;
@@ -58,6 +81,9 @@ main {
   box-shadow: 0 20px 40px rgba(0, 255, 225, 0.1);
 }
 
+/* -----------------------------------
+   Imagen dentro de la tarjeta de proyecto
+   ----------------------------------- */
 .project-image img {
   width: 100%;
   border-radius: 12px;
@@ -66,6 +92,9 @@ main {
   height: 180px;
 }
 
+/* -----------------------------------
+   Contenido textual de cada proyecto
+   ----------------------------------- */
 .project-content h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -75,6 +104,10 @@ main {
   color: #ccc;
   margin-bottom: 15px;
 }
+
+/* -----------------------------------
+   Botón de enlace al proyecto
+   ----------------------------------- */
 .btn.project-link {
   background: #fc86cb;
   color: #000;
@@ -87,7 +120,9 @@ main {
   background: #00ccbb;
 }
 
-/* Animación sutil al cargar */
+/* -----------------------------------
+   Animación sutil al cargar las tarjetas
+   ----------------------------------- */
 .project-card {
   opacity: 0;
   transform: translateY(20px);
@@ -99,6 +134,10 @@ main {
     transform: translateY(0);
   }
 }
+
+/* -----------------------------------
+   Sección de bienvenida (Hero Intro)
+   ----------------------------------- */
 .hero-intro {
   background-color: #0a0a0a;
   padding: 80px 20px;
@@ -118,13 +157,11 @@ main {
 .hero-text {
   flex: 1 1 50%;
 }
-
 .hero-text h1 {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
-
 .hero-text p {
   font-size: 1.2rem;
   color: #ccc;
@@ -135,7 +172,6 @@ main {
   flex: 1 1 40%;
   text-align: center;
 }
-
 .hero-image img {
   max-width: 100%;
   height: auto;
@@ -143,7 +179,9 @@ main {
   box-shadow: 0 0 40px rgba(0, 255, 225, 0.1);
 }
 
-/* Responsivo */
+/* -----------------------------------
+   Responsividad para pantallas pequeñas
+   ----------------------------------- */
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
@@ -158,4 +196,3 @@ main {
     font-size: 1rem;
   }
 }
-

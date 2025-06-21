@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<!-- Declaración del tipo de documento HTML y lenguaje en español -->
+<!-- 
+  El <head> contiene información del sitio que no se muestra en la página, 
+  como el título, enlaces a estilos y configuración del documento.
+-->
 <head>
     <meta charset="UTF-8">
+    <!-- Define el conjunto de caracteres como UTF-8 para permitir tildes, ñ, etc. -->
+
     <title>Portafolio Personal</title>
+    <!-- Título que se mostrará en la pestaña del navegador -->
+
     <link rel="stylesheet" href="../../assets/css/Proyecto-integrado-final/styles.css">
+    <!-- Vincula la hoja de estilos externa que define la apariencia de la página -->
 </head>
 
 <body>
+    <!-- Cuerpo principal del sitio -->
+
+    <!-- Enlace al login de administración con clase para estilos -->
     <a href="../../admin/login.php" class="login-button">Iniciar sesión</a>
 
-    
+    <!-- Sección de presentación principal -->
     <section class="hero-intro">
-  <div class="hero-container">
-    <div class="hero-text">
-      <h1>Bienvenido</h1>
-      <p>
-        Soy Sarita Marinao, desarrolladora Full Stack apasionada por la creación de soluciones digitales escalables. He trabajado en diversos proyectos web que combinan diseño moderno con funcionalidad real para el usuario.
-      </p>
-    </div>
-    <div class="hero-image">
-      <img src="../../assets/img/Proyecto-integrado-fnal/web-development.jpg" alt="Imagen ilustrativa de laptop y código">
-    </div>
-  </div>
-</section>
- <h1>Mis Proyectos</h1>
+        <div class="hero-container">
+            <!-- Contenedor del texto de bienvenida -->
+            <div class="hero-text">
+                <h1>Bienvenido</h1>
+                <p>
+                    Soy Sarita Marinao, desarrolladora Full Stack apasionada por la creación de soluciones digitales escalables.
+                    He trabajado en diversos proyectos web que combinan diseño moderno con funcionalidad real para el usuario.
+                </p>
+            </div>
+
+            <!-- Contenedor de imagen decorativa relacionada al desarrollo web -->
+            <div class="hero-image">
+                <img src="../../assets/img/Proyecto-integrado-fnal/web-development.jpg"
+                     alt="Imagen ilustrativa de laptop y código">
+            </div>
+        </div>
+    </section>
+
+    <!-- Título para la sección de proyectos -->
+    <h1>Mis Proyectos</h1>
+
+    <!-- Contenedor vacío donde se cargarán los proyectos desde la API con JS -->
     <div id="proyectos"></div>
 
-    <script>
-        async function cargarProyectos() {
-            const contenedor = document.getElementById("proyectos");
-            contenedor.innerHTML = "Cargando...";
-
-            try {
-                const res = await fetch("../../API/proyectos.php");
-
-                if (!res.ok) {
-                    const errorData = await res.json();
-                    throw new Error(errorData.error || "Error desconocido");
-                }
-
-                const proyectos = await res.json();
-
-                if (proyectos.length === 0) {
-                    contenedor.innerHTML = "<p>No hay proyectos para mostrar.</p>";
-                    return;
-                }
-
-                contenedor.innerHTML = "";
-                proyectos.forEach(p => {
-                    contenedor.innerHTML += `
-            <div>
-              <h3>${p.titulo}</h3>
-              <p>${p.descripcion}</p>
-              ${p.url_github ? `<a href="${p.url_github}" target="_blank">GitHub</a>` : ''}
-              ${p.url_produccion ? ` | <a href="${p.url_produccion}" target="_blank">Ver online</a>` : ''}
-              ${p.imagen ? `<br><img src=" ../../uploads/${p.imagen}" alt="${p.titulo}" width="200"><br>` : ''}
-              <hr>
-            </div>
-          `;
-                });
-
-            } catch (error) {
-                contenedor.innerHTML = `<p style="color:red;">Error al cargar proyectos: ${error.message}</p>`;
-            }
-        }
-
-        cargarProyectos();
-    </script>
+    <!-- Enlace al archivo JavaScript que carga los proyectos automáticamente -->
+    <script src="../../assets/js/Proyecto-integrado-final/script.js"></script>
 </body>
 
 </html>

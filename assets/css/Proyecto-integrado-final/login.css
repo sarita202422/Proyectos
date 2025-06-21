@@ -1,3 +1,8 @@
+/* ------------------------------
+   Estilos generales del cuerpo (body)
+   ------------------------------
+   Se centra el contenido vertical y horizontalmente con fondo oscuro y tipografía moderna.
+*/
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +15,11 @@ body {
   height: 100vh;
 }
 
+/* ------------------------------
+   Contenedor del formulario de login
+   ------------------------------
+   Caja con fondo más claro, padding, bordes redondeados y sombra para destacar el formulario.
+*/
 .login-container {
   background-color: #111132;
   padding: 40px;
@@ -19,12 +29,22 @@ body {
   width: 100%;
 }
 
+/* ------------------------------
+   Título del formulario
+   ------------------------------
+   Estilo visual centrado con color llamativo.
+*/
 .login-container h2 {
   text-align: center;
   margin-bottom: 30px;
   color: #fc86cb;
 }
 
+/* ------------------------------
+   Campos de entrada (usuario y contraseña)
+   ------------------------------
+   Campos con fondo oscuro, sin bordes y texto blanco.
+*/
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -37,6 +57,11 @@ input[type="password"] {
   font-size: 16px;
 }
 
+/* ------------------------------
+   Botón de enviar (login)
+   ------------------------------
+   Botón con color de fondo destacado, borde redondeado y animación al pasar el mouse.
+*/
 button[type="submit"] {
   width: 100%;
   padding: 12px;

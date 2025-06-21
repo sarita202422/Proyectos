@@ -1,3 +1,8 @@
+/* ------------------------------
+   Estilo general del cuerpo (body)
+   ------------------------------
+   Se define un fondo oscuro, se centra el contenido y se aplica una tipografía moderna.
+*/
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +14,11 @@ body {
   padding-top: 50px;
 }
 
+/* ------------------------------
+   Contenedor del formulario de edición
+   ------------------------------
+   Caja con fondo más claro, padding, bordes redondeados y sombra.
+*/
 .edit-container {
   background-color: #111132;
   padding: 40px;
@@ -16,14 +26,32 @@ body {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
   width: 100%;
   max-width: 600px;
+  margin: 60px auto;
+  background-color: #141425;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.1);
 }
 
-.edit-container h2 {
+/* ------------------------------
+   Título del formulario
+   ------------------------------
+   Estilo destacado con color llamativo y centrado.
+*/
+.edit-container h2,
+.edit-title {
   text-align: center;
   color: #fc86cb;
   margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
+/* ------------------------------
+   Campos del formulario (texto, URL, textarea, archivo)
+   ------------------------------
+   Campos de entrada con fondo oscuro, bordes suaves y texto blanco.
+*/
 form input[type="text"],
 form input[type="url"],
 form textarea,
@@ -38,11 +66,21 @@ form input[type="file"] {
   font-size: 15px;
 }
 
+/* ------------------------------
+   Área de texto ajustable
+   ------------------------------
+   Permite que el usuario cambie el tamaño verticalmente.
+*/
 form textarea {
   resize: vertical;
   min-height: 100px;
 }
 
+/* ------------------------------
+   Botón de envío del formulario
+   ------------------------------
+   Botón centrado con estilo llamativo y animación al pasar el mouse.
+*/
 form button[type="submit"] {
   padding: 12px 20px;
   background-color: #fc86cb;
@@ -58,20 +96,4 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
   background-color: #fc86cb;
-}
-.edit-container {
-  max-width: 600px;
-  margin: 60px auto;
-  background-color: #141425;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 255, 247, 0.1);
-}
-
-.edit-title {
-  color: #ffffff;
-  font-size: 28px;
-  margin-bottom: 25px;
-  text-align: center;
-  font-weight: bold;
 }

@@ -1,3 +1,9 @@
+/* ------------------------------
+   Estilos base del cuerpo (body)
+   ------------------------------
+   Se define un fondo oscuro, fuente moderna, texto blanco,
+   y se centra el contenido vertical y horizontalmente.
+*/
 body {
   background-color: #0b0b1d;
   font-family: 'Poppins', sans-serif;
@@ -10,6 +16,12 @@ body {
   min-height: 100vh;
 }
 
+/* ------------------------------
+   Contenedor principal del formulario
+   ------------------------------
+   Se aplica un fondo más oscuro con padding interno, bordes redondeados
+   y una sombra para destacar visualmente el formulario.
+*/
 .add-container {
   background-color: #14142b;
   padding: 40px;
@@ -20,6 +32,12 @@ body {
   text-align: center;
 }
 
+/* ------------------------------
+   Título del formulario
+   ------------------------------
+   Color llamativo para destacar el encabezado y separar
+   visualmente del resto del formulario.
+*/
 .add-title {
   margin-bottom: 30px;
   font-size: 26px;
@@ -27,6 +45,12 @@ body {
   color: #fc86cb;
 }
 
+/* ------------------------------
+   Campos del formulario
+   ------------------------------
+   Se estilizan todos los inputs, textarea y campos de archivo
+   con fondo oscuro, bordes redondeados y espaciado uniforme.
+*/
 form input[type="text"],
 form input[type="url"],
 form textarea,
@@ -42,11 +66,17 @@ form input[type="file"] {
   outline: none;
 }
 
+/* Permitir que el área de texto pueda redimensionarse */
 form textarea {
   resize: vertical;
   min-height: 100px;
 }
 
+/* ------------------------------
+   Botón para seleccionar archivos
+   ------------------------------
+   Colores personalizados y estilo consistente con el resto del diseño.
+*/
 form input::file-selector-button {
   background-color: #fc86cb;
   color: #000;
@@ -58,10 +88,16 @@ form input::file-selector-button {
   margin-right: 10px;
 }
 
+/* Hover con mismo color (se puede cambiar si se desea) */
 form input::file-selector-button:hover {
   background-color: #fc86cb;
 }
 
+/* ------------------------------
+   Botón de enviar (Guardar)
+   ------------------------------
+   Estilo principal para enviar el formulario, resaltando con color y tamaño.
+*/
 .btn-add {
   background-color: #fc86cb;
   color: #000;
